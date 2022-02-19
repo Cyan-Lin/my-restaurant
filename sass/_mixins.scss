@@ -1,0 +1,13 @@
+$bp-large: 1300px;
+$bp-big: 900px;
+$bp-md: 800px;
+$bp-md-1: 700px;
+$bp-md-2: 600px;
+$bp-sm-1: 450px;
+$bp-sm-2: 350px;
+
+@mixin respondMax($break-point) {
+  @media only screen and (max-width: $break-point/16px*1rem) {
+    @content;
+  }
+}

@@ -1,0 +1,203 @@
+.header {
+  padding: 1.2rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: var(--z-99);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-grey-dark-2);
+    box-shadow: var(--shadow);
+    z-index: -1;
+    transform: translateY(-101%);
+    transition: transform 0.4s ease;
+  }
+
+  &.sticky::before {
+    transform: translateY(0%);
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+// home section
+.section-home {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-grey-dark-2);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("../img/home-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    // filter: brightness(30%); 也可以
+    animation: zoomIn 3s ease-out forwards;
+
+    @include respondMax($bp-md-1) {
+      clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+    }
+  }
+}
+
+// about section
+.section-about {
+  padding: 15rem 0 10rem;
+  width: 100%;
+  background-color: var(--color-grey-dark-1);
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    background-color: var(--color-grey-dark-2);
+
+    @include respondMax($bp-md-1) {
+      clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+    }
+  }
+}
+
+// menu section
+.section-menu {
+  padding: 15rem 0 10rem;
+  width: 100%;
+  background-color: var(--color-grey-dark-2);
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    background-color: var(--color-grey-dark-1);
+
+    @include respondMax($bp-md-1) {
+      clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+    }
+  }
+}
+
+// review section
+.section-reviews {
+  padding: 15rem 0 10rem;
+  width: 100%;
+  background-color: var(--color-grey-dark-1);
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    background-color: var(--color-grey-dark-2);
+
+    @include respondMax($bp-md-1) {
+      clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+    }
+  }
+}
+
+// team section
+.section-team {
+  padding: 15rem 0 20rem;
+  width: 100%;
+  background-color: var(--color-grey-dark-1);
+  position: relative;
+
+  @include respondMax($bp-big) {
+    padding: 15rem 0 35rem;
+  }
+}
+
+.footer {
+  padding: 10rem 10rem 5rem;
+  width: 100%;
+  position: relative;
+
+  @include respondMax($bp-md-2) {
+    padding: 7.5rem 2.5rem 2.5rem;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("../img/footer-bg.jpg");
+    background-size: cover;
+    z-index: -1;
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100vh;
+  z-index: var(--z-999);
+  transition: all 0.5s;
+
+  backdrop-filter: blur(10px);
+}
+
+.page-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-grey-dark-1);
+  z-index: var(--z-9999);
+
+  transition: all 1s ease;
+
+  &::before {
+    content: "";
+    width: 10rem;
+    height: 4px;
+    background-color: var(--color-primary);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    animation: moveLeftRight 1s linear infinite;
+  }
+}

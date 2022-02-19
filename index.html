@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script src="script.js" defer></script>
+
+    <title>Dine Out - Restaurant</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <div class="container">
+        <div class="header__row">
+          <div class="logo">
+            <a class="logo__link" href="#home">
+              <img class="logo__img" src="img/logo.png" alt="" />
+            </a>
+          </div>
+          <button class="nav-toggler"><span></span></button>
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#home" class="nav__link">home</a>
+              </li>
+              <li class="nav__item">
+                <a href="#about" class="nav__link">about</a>
+              </li>
+              <li class="nav__item">
+                <a href="#menu" class="nav__link">out menu</a>
+              </li>
+              <li class="nav__item">
+                <a href="#review" class="nav__link">testimonials</a>
+              </li>
+              <li class="nav__item">
+                <a href="#team" class="nav__link">team</a>
+              </li>
+              <li class="nav__item">
+                <a href="#footer" class="nav__link">contact us</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- header -->
+
+    <!-- home section -->
+
+    <section class="section-home" id="home">
+      <div class="home">
+        <div class="home__text-box reveal">
+          <h1 class="home__text-main">Dine Out Restaurant</h1>
+          <p class="home__text-sub">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam
+            laudantium itaque vitae, minima dolore non.
+          </p>
+          <a href="#menu" class="btn btn--primary btn--scroll">our menu</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-about" id="about">
+      <div class="about">
+        <h2 class="heading-secondary reveal">
+          <span class="heading-main" data-title="our story"> about us</span>
+        </h2>
+        <div class="row reveal">
+          <div class="col-1-of-2">
+            <h3 class="heading-tertiary">welcome to dine out restaurant</h3>
+            <p class="paragraph mb-sm">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore
+              impedit eaque a incidunt ex consectetur nostrum excepturi ipsum
+              hic! Tempore repellendus doloribus modi, molestiae nobis
+              exercitationem delectus minus numquam quod!
+            </p>
+            <p class="paragraph mb-md">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+              laboriosam debitis consequatur earum aut? Aperiam consequatur
+              similique iure nostrum voluptates eum. Similique natus voluptatem
+              vero, reprehenderit enim dolore ab nihil.
+            </p>
+            <a href="#menu" class="btn btn--primary btn--scroll"
+              >check our menu</a
+            >
+          </div>
+          <div class="col-1-of-2">
+            <figure class="about__img-box">
+              <figcaption class="about__img-caption">
+                20+ years experience
+              </figcaption>
+              <img src="./img/about-img.jpg" alt="" class="about__img" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- menu section -->
+
+    <section class="section-menu" id="menu">
+      <div class="menu">
+        <h2 class="heading-secondary reveal">
+          <span class="heading-main" data-title="order now"> our menu</span>
+          <!-- 上面span用text-transform:capitalize會有問題 o 會不法大寫 因為有::before也算進去了 所以前面要加空格才會有效果 -->
+        </h2>
+        <div class="menu__tab reveal">
+          <ul class="menu__tab-list">
+            <li class="menu__tab-item">
+              <button class="btn btn--tab active" data-target="#lunch">
+                lunch
+              </button>
+            </li>
+            <li class="menu__tab-item">
+              <button class="btn btn--tab" data-target="#dinner">dinner</button>
+            </li>
+            <li class="menu__tab-item">
+              <button class="btn btn--tab" data-target="#drinks">drinks</button>
+            </li>
+            <li class="menu__tab-item">
+              <button class="btn btn--tab" data-target="#desserts">
+                desserts
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="menu__tab-content active reveal" id="lunch">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <img
+                src="./img/menu/1.jpg"
+                alt="menu item"
+                class="menu__item-img"
+              />
+              <span class="menu__item-name"
+                >Creamy pasta with asparagus & peas</span
+              >
+              <span class="menu__item-price">$30.00</span>
+            </li>
+            <li class="menu__item">
+              <img
+                src="./img/menu/2.jpg"
+                alt="menu item"
+                class="menu__item-img"
+              />
+              <span class="menu__item-name">Cacio e pepe</span>
+              <span class="menu__item-price">$30.00</span>
+            </li>
+            <li class="menu__item">
+              <img
+                src="./img/menu/3.jpg"
+                alt="menu item"
+                class="menu__item-img"
+              />
+              <span class="menu__item-name">Cheesy tuna pesto pasta</span>
+              <span class="menu__item-price">$30.00</span>
+            </li>
+            <li class="menu__item">
+              <img
+                src="./img/menu/4.jpg"
+                alt="menu item"
+                class="menu__item-img"
+              />
+              <span class="menu__item-name"
+                >Runner bean & prosciutto pasta</span
+              >
+              <span class="menu__item-price">$30.00</span>
+            </li>
+            <li class="menu__item">
+              <img
+                src="./img/menu/5.jpg"
+                alt="menu item"
+                class="menu__item-img"
+              />
+              <span class="menu__item-name"
+                >Asparagus pasta with mint pesto</span
+              >
+              <span class="menu__item-price">$30.00</span>
+            </li>
+            <li class="menu__item">
+              <img
+                src="./img/menu/6.jpg"
+                alt="menu item"
+                class="menu__item-img"
+              />
+              <span class="menu__item-name"> Salmon & spinach pasta</span>
+              <span class="menu__item-price">$30.00</span>
+            </li>
+            <li class="menu__item">
+              <img
+                src="./img/menu/7.jpg"
+                alt="menu item"
+                class="menu__item-img"
+              />
+              <span class="menu__item-name">Ravioli lasagne</span>
+              <span class="menu__item-price">$30.00</span>
+            </li>
+            <li class="menu__item">
+              <img
+                src="./img/menu/8.jpg"
+                alt="menu item"
+                class="menu__item-img"
+              />
+              <span class="menu__item-name"
+                >Creamy sausage & rocket linguine</span
+              >
+              <span class="menu__item-price">$30.00</span>
+            </li>
+          </ul>
+        </div>
+        <div class="menu__tab-content" id="dinner">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <img
+                src="./img/menu/1.jpg"
+                alt="menu item"
+                class="menu__item-img"
+              />
+              <span class="menu__item-name">Dinner-1</span>
+              <span class="menu__item-price">$35.00</span>
+            </li>
+            <li class="menu__item">
+              <img
+                src="./img/menu/2.jpg"
+                alt="menu item"
+                class="menu__item-img"
+              />
+              <span class="menu__item-name">Dinner-2</span>
+              <span class="menu__item-price">$35.00</span>
+            </li>
+            <li class="menu__item">
+              <img
+                src="./img/menu/3.jpg"
+                alt="menu item"
+                class="menu__item-img"
+              />
+              <span class="menu__item-name">Dinner-3</span>
+              <span class="menu__item-price">$35.00</span>
+            </li>
+            <li class="menu__item">
+              <img
+                src="./img/menu/4.jpg"
+                alt="menu item"
+                class="menu__item-img"
+              />
+              <span class="menu__item-name">Dinner-4</span>
+              <span class="menu__item-price">$35.00</span>
+            </li>
+            <li class="menu__item">
+              <img
+                src="./img/menu/5.jpg"
+                alt="menu item"
+                class="menu__item-img"
+              />
+              <span class="menu__item-name">Dinner-5</span>
+              <span class="menu__item-price">$35.00</span>
+            </li>
+          </ul>
+        </div>
+        <div class="menu__tab-content" id="drinks">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <img
+                src="./img/menu/1.jpg"
+                alt="menu item"
+                class="menu__item-img"
+              />
+              <span class="menu__item-name">Drink-1</span>
+              <span class="menu__item-price">$10.00</span>
+            </li>
+            <li class="menu__item">
+              <img
+                src="./img/menu/2.jpg"
+                alt="menu item"
+                class="menu__item-img"
+              />
+              <span class="menu__item-name">Drink-2</span>
+              <span class="menu__item-price">$10.00</span>
+            </li>
+          </ul>
+        </div>
+        <div class="menu__tab-content" id="desserts">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <img
+                src="./img/menu/1.jpg"
+                alt="menu item"
+                class="menu__item-img"
+              />
+              <span class="menu__item-name">Desserts-1</span>
+              <span class="menu__item-price">$15.00</span>
+            </li>
+            <li class="menu__item">
+              <img
+                src="./img/menu/2.jpg"
+                alt="menu item"
+                class="menu__item-img"
+              />
+              <span class="menu__item-name">Desserts-2</span>
+              <span class="menu__item-price">$15.00</span>
+            </li>
+            <li class="menu__item">
+              <img
+                src="./img/menu/3.jpg"
+                alt="menu item"
+                class="menu__item-img"
+              />
+              <span class="menu__item-name">Desserts-3</span>
+              <span class="menu__item-price">$15.00</span>
+            </li>
+            <li class="menu__item">
+              <img
+                src="./img/menu/4.jpg"
+                alt="menu item"
+                class="menu__item-img"
+              />
+              <span class="menu__item-name">Desserts-4</span>
+              <span class="menu__item-price">$15.00</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- reviews section -->
+
+    <section class="section-reviews" id="review">
+      <div class="reviews">
+        <h2 class="heading-secondary reveal">
+          <span class="heading-main" data-title="testimonials">
+            some feedbacks</span
+          >
+        </h2>
+
+        <div class="reviews-box reveal">
+          <div class="review">
+            <figcaption class="review__user">
+              <div class="review__user-info">
+                <span class="heading-quaternary mb-sm">Roj Himachal</span>
+                <span class="review__user-sub">Food Specialist</span>
+              </div>
+              <img
+                src="./img/testimonials/1.jpg"
+                alt="user image"
+                class="review__user-img"
+              />
+            </figcaption>
+            <blockquote class="paragraph mb-md">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
+              iusto impedit aliquid eius dolorem harum quasi necessitatibus
+              beatae sequi nesciunt doloremque dolorum.
+            </blockquote>
+            <div class="review__rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+          <div class="review">
+            <figcaption class="review__user">
+              <div class="review__user-info">
+                <span class="heading-quaternary mb-sm">Roj Himachal</span>
+                <span class="review__user-sub">Food Specialist</span>
+              </div>
+              <img
+                src="./img/testimonials/2.jpg"
+                alt="user image"
+                class="review__user-img"
+              />
+            </figcaption>
+            <blockquote class="paragraph mb-md">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
+              iusto impedit aliquid eius dolorem harum quasi necessitatibus
+              beatae sequi nesciunt doloremque dolorum.
+            </blockquote>
+            <div class="review__rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+          <div class="review">
+            <figcaption class="review__user">
+              <div class="review__user-info">
+                <span class="heading-quaternary mb-sm">Roj Himachal</span>
+                <span class="review__user-sub">Food Specialist</span>
+              </div>
+              <img
+                src="./img/testimonials/3.jpg"
+                alt="user image"
+                class="review__user-img"
+              />
+            </figcaption>
+            <blockquote class="paragraph mb-md">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
+              iusto impedit aliquid eius dolorem harum quasi necessitatibus
+              beatae sequi nesciunt doloremque dolorum.
+            </blockquote>
+            <div class="review__rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- team section -->
+    <section class="section-team" id="team">
+      <div class="team">
+        <h2 class="heading-secondary reveal">
+          <span class="heading-main" data-title="team"> our chefs</span>
+        </h2>
+        <div class="cards-box reveal">
+          <div class="card">
+            <div class="card__front">
+              <div class="card__img card__img--1">&nbsp;</div>
+              <!-- <img src="./img/team/1.jpg" alt="chef img" class="card__img" /> -->
+              <div class="card__info">
+                <h4 class="heading-quaternary mb-sm">Roj Himachal</h4>
+                <span class="card__chef-sub">head chef</span>
+              </div>
+            </div>
+            <div class="card__back card__back--1">
+              <div class="card__cta">
+                <div class="card__cta-text">
+                  <span class="card__cta-our">our</span>
+                  <span class="card__cta-best-chef">best chef</span>
+                </div>
+                <button class="btn btn--primary-reverse btn--show-modal">
+                  learn more
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__front">
+              <div class="card__img card__img--2">&nbsp;</div>
+              <!-- <img src="./img/team/1.jpg" alt="chef img" class="card__img" /> -->
+              <div class="card__info">
+                <h4 class="heading-quaternary mb-sm">Roj Himachal</h4>
+                <span class="card__chef-sub">head chef</span>
+              </div>
+            </div>
+            <div class="card__back card__back--2">
+              <div class="card__cta">
+                <div class="card__cta-text">
+                  <span class="card__cta-our">our</span>
+                  <span class="card__cta-best-chef">best chef</span>
+                </div>
+                <button class="btn btn--primary-reverse btn--show-modal">
+                  learn more
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__front">
+              <div class="card__img card__img--3">&nbsp;</div>
+              <!-- <img src="./img/team/1.jpg" alt="chef img" class="card__img" /> -->
+              <div class="card__info">
+                <h4 class="heading-quaternary mb-sm">Roj Himachal</h4>
+                <span class="card__chef-sub">head chef</span>
+              </div>
+            </div>
+            <div class="card__back card__back--3">
+              <div class="card__cta">
+                <div class="card__cta-text">
+                  <span class="card__cta-our">our</span>
+                  <span class="card__cta-best-chef">best chef</span>
+                </div>
+                <button class="btn btn--primary-reverse btn--show-modal">
+                  learn more
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer" id="footer">
+      <div class="footer__row border-bot pb-large text-center reveal">
+        <div class="col-1-of-3">
+          <h4 class="heading-quaternary mb-sm">our location</h4>
+          <div class="footer__info">
+            <div class="footer__detail">Abc Street, Sector-12</div>
+            <div class="footer__detail">New York - 000***</div>
+          </div>
+        </div>
+        <div class="col-1-of-3">
+          <h4 class="heading-quaternary mb-sm">opening hours</h4>
+          <div class="footer__info">
+            <div class="footer__detail">Monday to Sunday</div>
+            <div class="footer__detail">9:00 AM - 10 PM</div>
+          </div>
+        </div>
+        <div class="col-1-of-3">
+          <h4 class="heading-quaternary mb-sm">contact us</h4>
+          <div class="footer__info">
+            <div class="footer__detail">12 1235 4564</div>
+            <div class="footer__detail">abc@gmail.com</div>
+            <div class="footer__icons-box">
+              <a href="#" class="btn btn--white">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="#" class="btn btn--white"
+                ><i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="#" class="btn btn--white"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+              <a href="#" class="btn btn--white"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="footer__copyright reveal">&copy; 2022</p>
+    </footer>
+
+    <div class="modal hidden">
+      <div class="modal__content">
+        <div class="modal__img-box">
+          <img src="./img/team/1.jpg" alt="chef img" class="modal__img" />
+        </div>
+        <div class="modal__detail">
+          <h2 class="heading-secondary">Roj Himachal</h2>
+          <p class="modal__text">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci
+            laborum iste necessitatibus qui aliquam repudiandae amet, dolores
+            consequatur minus laboriosam incidunt mollitia ad fugiat excepturi
+            quia, quos deserunt quo? Explicabo. Dolor autem nobis sequi debitis,
+            consequuntur recusandae dolores pariatur voluptatum.
+          </p>
+        </div>
+        <button class="btn btn--close-modal">&times;</button>
+      </div>
+    </div>
+
+    <div class="page-loader">&nbsp;</div>
+  </body>
+</html>
