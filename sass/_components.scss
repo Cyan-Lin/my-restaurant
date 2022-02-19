@@ -654,10 +654,14 @@
 
     @include respondMax($bp-md) {
       flex-direction: column;
-      width: 40%;
+      width: 35rem;
       height: 80vh;
       overflow-y: scroll;
       padding: 0 0 5rem;
+    }
+
+    @include respondMax($bp-sm-2) {
+      width: 30rem;
     }
   }
 

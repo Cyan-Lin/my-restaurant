@@ -665,10 +665,13 @@ ul {
   @media only screen and (max-width: 50rem) {
     .modal__content {
       flex-direction: column;
-      width: 40%;
+      width: 35rem;
       height: 80vh;
       overflow-y: scroll;
       padding: 0 0 5rem; } }
+  @media only screen and (max-width: 21.875rem) {
+    .modal__content {
+      width: 30rem; } }
 
 .modal__img-box {
   align-self: stretch;
